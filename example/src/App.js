@@ -9,7 +9,7 @@ import Example3 from "./examples/example_3";
 const App = () => {
     return (
         <div className="container mt-3 mt-lg-5">
-            <h1>Best React tabs</h1>
+            <h1>React Best tabs</h1>
             <p>A great package to easily create beautiful tabs in React.</p>
 
             <Section>
@@ -17,7 +17,7 @@ const App = () => {
                 <hr/>
                 <Pre>
                     <code>
-                        npm install --save best-tabs
+                        npm install --save react-best-tabs
                     </code>
                 </Pre>
             </Section>

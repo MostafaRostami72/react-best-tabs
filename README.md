@@ -5,9 +5,9 @@
 [![NPM](https://img.shields.io/npm/v/react-best-tabs.svg)](https://www.npmjs.com/package/react-best-tabs) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Full Document
--   [Document](https://mostafarostami72.github.io/best-tabs/)
+-   [Document](https://mostafarostami72.github.io/react-best-tabs/)
 ## Demo
--   [Demo](https://mostafarostami72.github.io/best-tabs/)
+-   [Demo](https://mostafarostami72.github.io/react-best-tabs/)
 
 
 ## Install
