@@ -7,6 +7,7 @@
   "repository": "https://github.com/MostafaRostami72/react-best-tabs.git",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "source": "src/index.js",
   "engines": {
     "node": ">=10"
