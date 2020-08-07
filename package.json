@@ -1,13 +1,12 @@
 {
   "name": "react-best-tabs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A great package to easily create beautiful tabs in React Js",
   "author": "MostafaRostami72",
   "license": "MIT",
   "repository": "https://github.com/MostafaRostami72/react-best-tabs.git",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "source": "src/index.js",
   "engines": {
     "node": ">=10"
