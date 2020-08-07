@@ -20,7 +20,7 @@ npm install --save react-best-tabs
 
 ```jsx
 import React, { Component } from 'react'
-import Tabs, {Tab} from 'best-tabs';
+import Tabs, {Tab} from 'react-best-tabs';
 
 
 class Example extends Component {
