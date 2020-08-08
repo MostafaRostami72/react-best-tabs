@@ -38,7 +38,7 @@ export default function Example3() {
                                 <div className="mt-3">
                                     {
                                         (tab.loading) ?
-                                            <img src="/loading.gif" width="80" height="80" alt="loading"/>
+                                            <img src="loading.gif" width="80" height="80" alt="loading"/>
                                             :
                                             tab.content
                                     }

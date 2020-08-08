@@ -26,7 +26,7 @@ import Tabs, {Tab} from 'react-best-tabs';
 class Example extends Component {
   render() {
     return (
-        <Tabs activeTab="1" className="" ulClassName="" activityClassName="bg-success" onClick={(event, tab) => handleClick(event, tab)}>
+        <Tabs activeTab="1" className="" ulClassName="" activityClassName="bg-success" onClick={(event, tab) => console.log(event, tab)}>
             <Tab title="tab 1" className="mr-3">
                 <div className="mt-3">
                     Tab 1 content
@@ -47,6 +47,8 @@ class Example extends Component {
   }
 }
 ```
+## Support
+We are glad you choose this package. If this package is useful for you, please give us a star.
 
 ## License
 
