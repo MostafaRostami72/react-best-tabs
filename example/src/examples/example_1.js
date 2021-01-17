@@ -1,6 +1,7 @@
 import React from 'react'
 import Tabs, {Tab} from 'react-best-tabs'
 
+
 export default function Example1() {
     return (
         <div>

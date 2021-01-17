@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
 import ParentProps from "./parent.props";
+import 'react-best-tabs/dist/index.css'
 import TabProps from "./tab.props";
 import Example1 from "./examples/example_1";
 import Example2 from "./examples/example_2";
@@ -29,8 +30,12 @@ const App = () => {
                 <div className="mt-3">
                     <h4 className="mb-3">1 - Import component</h4>
                     <Pre>
-                        <code>
+                        <code className="d-block">
                             import Tabs,{'{Tab}'} from 'react-best-tabs';
+                        </code>
+
+                        <code className="d-block">
+                            import 'react-best-tabs/dist/index.css';
                         </code>
                     </Pre>
                 </div>

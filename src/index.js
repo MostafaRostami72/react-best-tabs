@@ -1,5 +1,5 @@
 import React, {useState, useRef, useEffect} from 'react';
-import styled from "styled-components";
+import './style.scss'
 
 
 export default function Tabs({activeTab, children, className, ulClassName, activityClassName, onClick}) {
@@ -21,7 +21,7 @@ export default function Tabs({activeTab, children, className, ulClassName, activ
     const handleTabItems = (children) => {
         return (
             children.map((tab, key) =>
-                <CardItem ref={tabItemRefs[key]} key={key} onClick={(e) => handleClickOnTab(e, key)} className={(tab.props.className ? tab.props.className : '') + ((activeItem === key + 1) ? ' active' : '')}>{tab.props.title}</CardItem>
+                <li ref={tabItemRefs[key]} key={key} onClick={(e) => handleClickOnTab(e, key)} className={'rb-tabs-item ' +(tab.props.className ? tab.props.className : '') + ((activeItem === key + 1) ? ' active' : '')}>{tab.props.title}</li>
             )
         )
     };
@@ -47,26 +47,26 @@ export default function Tabs({activeTab, children, className, ulClassName, activ
     }, [activeItem]);
 
     return (
-        <Container className={(className ? className : '')}>
-            <Header>
-                <Card className={(ulClassName ? ulClassName : '')}>
+        <div className={'rb-tabs ' + (className ? className : '')}>
+            <div className="rb-tabs-header">
+                <ul className={'rb-tabs-items ' + (ulClassName ? ulClassName : '')}>
                     {handleTabItems(children)}
-                </Card>
+                </ul>
 
-                <ActiveBorder style={{
+                <div style={{
                     width: activeBorder.width + 'px',
                     left: activeBorder.left
-                }} className={(activityClassName ? activityClassName : '')}/>
-            </Header>
+                }} className={'rb-tabs-active-item ' + (activityClassName ? activityClassName : '')}/>
+            </div>
 
-            <Content>
+            <div className="rb-tabs-content">
                 {
                     children.map((item, key) =>
-                        <ContentItem show={(activeItem === key + 1)} key={key}>{item.props.children}</ContentItem>
+                        <div className={"rb-tabs-content-item " + ((activeItem === key + 1) ? 'show' : '')} key={key}>{item.props.children}</div>
                     )
                 }
-            </Content>
-        </Container>
+            </div>
+        </div>
     )
 }
 
@@ -75,53 +75,3 @@ export function Tab({children, title, className}) {
         <li>{title}</li>
     )
 }
-
-// styles
-const Container = styled.div`
-    position: relative;
-`;
-
-const Header = styled.div`
-    position: relative;
-`;
-
-const ActiveBorder = styled.div`
-    height: 2px;
-    background-color: #222222;
-    position: absolute;
-    bottom: 0;
-    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    will-change: left, width;
-`;
-
-const Card = styled.ul`
-    display: flex;
-    align-items: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border-bottom: 1px solid #ebebeb;
-    
-    @media (max-width: 768px) {
-        justify-content: space-between;
-    }
-`;
-
-const CardItem = styled.li`
-    padding: 8px 16px;
-    cursor: pointer;
-    
-    &.active {
-        font-weight: 500;
-    }
-    
-    @media (max-width: 768px) {
-        font-size: 14px;
-    }
-`;
-
-const Content = styled.div``;
-
-const ContentItem = styled.div`
-    display: ${props => props.show ? 'block' : 'none'};
-`;
