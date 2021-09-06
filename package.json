@@ -1,6 +1,6 @@
 {
   "name": "react-best-tabs",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "A great package to easily create beautiful tabs in React Js",
   "author": "MostafaRostami72",
   "license": "MIT",
@@ -24,7 +24,7 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": ">16.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
