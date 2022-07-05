@@ -13,8 +13,10 @@
   },
   "types": "dist/react-best-tabs.d.ts",
   "scripts": {
-    "build": "microbundle-crl --css-modules false --format modern,cjs",
+    "build": "npm-run-all build2 copy:types",
+    "build2": "microbundle-crl --css-modules false --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --css-modules false --format modern,cjs",
+    "copy:types": "cp ./react-selection-box.d.ts ./dist --parents",
     "prepare": "run-s build",
     "test": "run-s test:unit test:lint test:build",
     "test:build": "run-s build",
