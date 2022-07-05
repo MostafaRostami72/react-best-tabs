@@ -27,7 +27,13 @@ import 'react-best-tabs/dist/index.css';
 class Example extends Component {
   render() {
     return (
-        <Tabs activeTab="1" className="" ulClassName="" activityClassName="bg-success" onClick={(event, tab) => console.log(event, tab)}>
+        <Tabs
+          activeTab="1"
+          className=""
+          ulClassName=""
+          activityClassName="bg-success"
+          onClick={(event, tab) => console.log(event, tab)}
+        >
             <Tab title="tab 1" className="mr-3">
                 <div className="mt-3">
                     Tab 1 content

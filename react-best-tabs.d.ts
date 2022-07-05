@@ -16,7 +16,7 @@ export interface IReactBestTabsProps {
   activityClassName?: string
 
   // run when click on tab
-  onClick?: (event: React.MouseEvent<HTMLLIElement>, index: number) => void
+  onClick?: (event: React.MouseEvent<HTMLLIElement>, tab: number) => void
 }
 
 // ReactBestTabs component is the default export
