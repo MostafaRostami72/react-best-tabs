@@ -22,3 +22,9 @@ export interface IReactBestTabsProps {
 // ReactBestTabs component is the default export
 
 export default function Tabs(props: IReactBestTabsProps)
+
+export function Tab(props: {
+  title: string
+  children?: React.ReactNode;
+  className?: string
+})
