@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
+import GitHubButton from 'react-github-btn';
 import ParentProps from "./parent.props";
 import 'react-best-tabs/dist/index.css'
 import TabProps from "./tab.props";
@@ -10,8 +11,22 @@ import Example3 from "./examples/example_3";
 const App = () => {
     return (
         <div className="container mt-3 mt-lg-5">
-            <h1>React Best tabs</h1>
-            <p>A great package to easily create beautiful tabs in React.</p>
+            <div className="d-flex align-items-center justify-content-between bg-white position-sticky fixed-top">
+              <div className="">
+                <h1>React Best tabs</h1>
+                <p>A great package to easily create beautiful tabs in React.</p>
+              </div>
+
+              <div className="d-flex align-items-center">
+                <div className="github-icon">
+                  <GitHubButton href="https://github.com/MostafaRostami72/react-best-tabs" data-show-count="true" data-size="large" aria-label="Star react-best-tabs on GitHub">Star</GitHubButton>
+                </div>
+
+                <a href="https://www.npmjs.com/package/react-best-tabs" target="_blank" className="ml-3">
+                  <img alt="npm" src="https://img.shields.io/npm/v/react-best-tabs.svg"/>
+                </a>
+              </div>
+            </div>
 
             <Section>
                 <h2>Install</h2>
@@ -122,7 +137,7 @@ export default App;
 
 const Section = styled.div`
     margin: 80px 0;
-    
+
     @media (max-width: 768px) {
         margin: 56px 0;
     }
